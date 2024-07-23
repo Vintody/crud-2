@@ -32,7 +32,7 @@ if (isset($_POST['simpan'])) {
     }
 }
 
-// Fungsi untuk mengambil data kunjungan dokter
+
 function ambilDataDokter() {
     global $koneksi;
     $sql = "SELECT dokter.*, pasien.nmpasien FROM dokter LEFT JOIN pasien ON dokter.idpasien = pasien.idpasien";
@@ -40,7 +40,7 @@ function ambilDataDokter() {
     return $hasil;
 }
 
-// Fungsi untuk menghapus data kunjungan dokter
+
 if (isset($_GET['idkunjungan'])) {
     $idkunjungan = $_GET['idkunjungan'];
     
