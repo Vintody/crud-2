@@ -13,12 +13,11 @@
             <?php
             include 'konek.php';
             
-            // Ambil data dokter berdasarkan id kunjungan
             if(isset($_GET['edit'])) {
                 $idEdit = $_GET['edit'];
                 $panggil = $koneksi->query("SELECT * FROM dokter WHERE idkunjungan='$idEdit'");
                 
-                // Loop untuk menampilkan form edit
+        
                 while ($row = $panggil->fetch_assoc()) {
             ?>
             <form action="konek.php" method="POST">
